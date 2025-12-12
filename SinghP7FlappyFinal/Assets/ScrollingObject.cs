@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrollingObject : MonoBehaviour
+public class Scrollingobject : MonoBehaviour
 {
     private Rigidbody2D rb2d;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +19,5 @@ public class ScrollingObject : MonoBehaviour
         {
             rb2d.velocity = Vector2.zero;
         }
-    }  
+    }
 }
