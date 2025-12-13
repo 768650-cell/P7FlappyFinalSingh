@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class GameControl : MonoBehaviour
 {
     public static GameControl instance;
@@ -13,12 +14,11 @@ public class GameControl : MonoBehaviour
     public bool gameOver = false;
     public float scrollspeed = -1.5f;
 
-    private int score = 0;
-
     // Start is called before the first frame update
     void Start()
     {
-        if (instance == null) {
+        if (instance == null) 
+        {
             instance = this;
         }
         else if (instance != this)
@@ -35,7 +35,6 @@ public class GameControl : MonoBehaviour
             SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
         }
     }
-
     public void BirdScored()
     {
         if (gameOver)
@@ -43,7 +42,7 @@ public class GameControl : MonoBehaviour
             return;
         }
         score++;
-        scoreText.text = score.ToString ();
+        scoreText.text = ("score: ") + score.ToString ();
     }
 
     public void BirdDied()
